@@ -1,0 +1,166 @@
+introduction of the project:-
+
+It’s a list of tasks you need to complete or things that you want to do. 
+
+Most typically, they’re organized in order of priority. Traditionally, they’re written on a piece of paper or Post-it notes and act as a memory aid.
+
+As technology has evolved we have created a to-do list with Excel spreadsheets, word documents, email lists, to-do list apps, Microsoft to-do, and google to-do lists to name a few. You can use a to-do list in your home and personal life or the workplace.
+
+Having a list of everything you need to do written down in one place means you shouldn’t forget anything important. By prioritizing the tasks in the list you plan the order in which you’re going to do them and can quickly see what needs your immediate attention and what tasks you can leave until a little later.
+
+describing the project modules:-
+
+the to-do-list app is divided into 4 segments such as:
+- images
+- index.html
+- style.css
+- script.js 
+
+In Images, there are some images that are required in this project such as background image-bg.png, to check the list I used ima.png, and to uncheck the list I used uncheck.png.
+
+In index.html, i used the <link> tag to link the style.CSS file with the HTML file.
+
+for font, i used the prompt style from Google Fonts. and applied the font to the whole body of the website.
+all the changes and insertion will be done inside the container.
+for the background image, i used image-bg.png in the container and style the container by using CSS where
+
+added a heading using <h1> tag "to-do-list" Before adding the heading we create the <div> in which we take the class named todo-app. inside this list the heading <h1> is created. and styling the class with CSS 
+
+after this, I again created a div with a class named list inside the todo-app class and style the list with CSS
+in which I added the Input tag with type text with placeholder and a unique id named input-box and styled the input box with CSS 
+added a button named add in the class list which will trigger on click and add the task we wanted 
+and added a unique id named btn which is styled by using the CSS
+
+outside the todo-app class again i created a div in which i used the <h4> tag in which i described who made the project and provide the LinkedIn and GitHub links to access the project by using <a> tag for the link used href function.
+
+i used the <script> tag to link the script file with the HTML file
+
+in Style.CSS,
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    box-sizing: border-box;
+}
+
+
+#btn{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #ffe0e9;
+}
+
+#btn:hover{
+    background-color:#e06c9f ;
+}
+
+#input-box{
+    flex: 1;
+    width: 500px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:2px solid  #e8c2ca;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+h2{
+    color: #432818;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #e8c2ca;
+    margin: 100px auto 20px;
+    padding: 30px 20px 40px;
+    border: 2px solid #b392ac;
+    border-radius: 20px;   
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/bg.png");
+    padding: 10px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height:30px ;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(images/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 10px;
+}
+
+ul li.checked {
+    color: black;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/ima.png);
+    background-size: cover;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px ;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #e06c9f;
+
+}
+h4{
+    text-align: center;
+    font-size: large;
+}
+
+
+in script.js, we made the 2 const variables named inputBox and listContainer form which passes the arguments to the functions.
+
+in addTask function, I applied the condition if the inputBox value is equal to the '' i.e. empty then, it will show the message you have to write something.
+else it will create an element "li" and add the value to the inputBox and append it to the listContainer 
+
+
